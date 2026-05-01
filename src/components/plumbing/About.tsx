@@ -16,7 +16,7 @@ const About = () => {
           <div className="absolute -left-4 -top-4 h-full w-full border border-copper/40" />
           <img
             src={craftsman}
-            alt="Portrait de l'artisan plombier Moure Lethoor"
+            alt="Atelier Moure Lethoor — outils et raccords cuivre"
             width={1200}
             height={1400}
             loading="lazy"

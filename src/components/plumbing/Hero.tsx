@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative min-h-screen overflow-hidden bg-ink-deep grain">
       <img
         src={hero}
-        alt="Plombier Moure Lethoor au travail sur des tuyaux en cuivre"
+        alt="Tuyaux en cuivre et raccords laiton — savoir-faire Moure Lethoor"
         width={1600}
         height={1200}
         className="absolute inset-0 h-full w-full object-cover opacity-60"
