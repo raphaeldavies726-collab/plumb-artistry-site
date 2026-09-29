@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import { business } from "@/config/business";
 
 const reviews = [
   {
@@ -52,14 +53,14 @@ const Reviews = () => {
           </div>
           <div className="md:justify-self-end md:text-right">
             <div className="flex items-center gap-2 md:justify-end">
-              <span className="font-display text-5xl text-ink">4,1</span>
+              <span className="font-display text-5xl text-ink">{business.rating.value.toLocaleString("fr-FR")}</span>
               <div>
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`h-4 w-4 ${i < 4 ? "fill-copper text-copper" : "text-muted-foreground/40"}`} />
+                    <Star key={i} className={`h-4 w-4 ${i < Math.round(business.rating.value) ? "fill-copper text-copper" : "text-muted-foreground/40"}`} />
                   ))}
                 </div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">9 avis Google</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">{business.rating.count} avis Google</div>
               </div>
             </div>
           </div>

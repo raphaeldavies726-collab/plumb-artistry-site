@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import hero from "@/assets/hero-plumber.jpg";
+import { business } from "@/config/business";
 
 const Hero = () => {
   return (
@@ -20,10 +21,10 @@ const Hero = () => {
           <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-bone/20 bg-bone/5 px-4 py-2 backdrop-blur">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-3.5 w-3.5 fill-copper-glow text-copper-glow" />
+                <Star key={i} className={`h-3.5 w-3.5 ${i < Math.round(business.rating.value) ? "fill-copper-glow text-copper-glow" : "text-bone/30"}`} />
               ))}
             </div>
-            <span className="text-xs uppercase tracking-[0.2em] text-bone/80">Noté 4.1 · 9 avis Google</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-bone/80">Noté {business.rating.value.toLocaleString("fr-FR")} · {business.rating.count} avis Google</span>
           </div>
 
           <h1 className="font-display text-5xl font-light leading-[0.95] text-bone md:text-7xl lg:text-8xl text-balance">

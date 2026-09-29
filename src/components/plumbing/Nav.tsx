@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { telLink } from "@/config/business";
 
 const Nav = () => {
   return (
@@ -15,7 +16,7 @@ const Nav = () => {
           <a href="#reviews" className="hover:text-copper-glow transition-colors">Avis</a>
         </nav>
         <Button variant="copper" size="sm" asChild>
-          <a href="tel:+33000000000"><Phone /> Urgence 24/7</a>
+          <a href={telLink}><Phone /> Urgence 24/7</a>
         </Button>
       </div>
     </header>
